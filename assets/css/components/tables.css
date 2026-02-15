@@ -1,0 +1,87 @@
+/**
+ * Tables CSS - الجداول
+ * يحتوي على تنسيقات الجداول
+ */
+
+.table-responsive {
+    width: 100%;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    margin-bottom: 1rem;
+}
+
+table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0;
+    min-width: 600px;
+    /* Ensures table doesn't collapse too much */
+}
+
+th {
+    text-align: right;
+    padding: 16px;
+    color: var(--text-muted);
+    font-weight: 500;
+    border-bottom: 1px solid var(--border-glass);
+}
+
+td {
+    padding: 16px;
+    border-bottom: 1px solid var(--border-glass);
+    color: var(--text-main);
+}
+
+tr:last-child td {
+    border-bottom: none;
+}
+
+tbody tr {
+    transition: var(--transition);
+}
+
+tbody tr:hover {
+    background: rgba(255, 255, 255, 0.02);
+}
+
+/* جدول المواصفات الفنية */
+.specs-table {
+    width: 100% !important;
+    min-width: auto !important;
+    border-collapse: collapse !important;
+    table-layout: fixed !important;
+}
+
+.specs-table tr {
+    border-bottom: 1px solid var(--border-glass);
+}
+
+.specs-table tr:last-child {
+    border-bottom: none;
+}
+
+.specs-table td {
+    padding: 12px 10px !important;
+    vertical-align: middle !important;
+    min-width: auto !important;
+}
+
+.specs-table .spec-label {
+    width: 50% !important;
+    text-align: right !important;
+}
+
+.specs-table .spec-value {
+    width: 50% !important;
+    font-weight: bold !important;
+    text-align: left !important;
+}
+
+/* تعديل للغة الإنجليزية */
+html[lang="en"] .specs-table .spec-label {
+    text-align: left !important;
+}
+
+html[lang="en"] .specs-table .spec-value {
+    text-align: right !important;
+}

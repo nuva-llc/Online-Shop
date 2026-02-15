@@ -1,0 +1,13 @@
+/**
+ * Footer CSS - تذييل الصفحة
+ * يحتوي على تنسيقات التذييل
+ */
+
+footer {
+    background: var(--bg-body);
+    padding: 60px 0 30px;
+    margin-top: 80px;
+    border-top: 1px solid var(--border-glass);
+    text-align: center;
+    color: var(--text-muted);
+}

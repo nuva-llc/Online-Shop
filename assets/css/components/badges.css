@@ -1,0 +1,68 @@
+/**
+ * Badges CSS - الشارات والإشعارات
+ * يحتوي على تنسيقات الشارات والنقاط
+ */
+
+/* Badges and Notifications */
+.badge-dot {
+    position: absolute;
+    top: -8px;
+    right: -8px;
+    background: var(--primary);
+    color: #fff;
+    border-radius: 50%;
+    width: 18px;
+    height: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.7rem;
+    font-weight: bold;
+    box-shadow: 0 0 10px var(--primary-glow);
+    z-index: 10;
+}
+
+.badge {
+    display: inline-flex !important;
+    position: relative !important;
+    top: auto !important;
+    right: auto !important;
+    left: auto !important;
+    bottom: auto !important;
+    align-items: center;
+    justify-content: center;
+    padding: 6px 14px;
+    border-radius: 50px;
+    font-size: 0.85rem;
+    font-weight: 700;
+    color: #fff;
+    background: var(--primary);
+    text-align: center;
+    white-space: nowrap;
+    line-height: 1;
+    min-height: 28px;
+    vertical-align: middle;
+}
+
+.badge-success {
+    background-color: var(--success);
+}
+
+.badge-danger {
+    background-color: var(--danger);
+}
+
+.badge-warning {
+    background-color: var(--warning);
+    color: #000;
+}
+
+.badge-accent {
+    background-color: var(--text-accent);
+}
+
+.badge-outline {
+    background: transparent;
+    border: 1px solid var(--border-glass);
+    color: var(--text-muted);
+}

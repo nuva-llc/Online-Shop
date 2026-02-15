@@ -1,0 +1,49 @@
+/**
+ * Globals CSS - التنسيقات العامة
+ * يحتوي على تنسيقات العناصر الأساسية (body, headings, links, lists)
+ */
+
+body {
+    background-color: var(--bg-body);
+    /* تدرج لوني خلفي لإعطاء عمق للتصميم */
+    background-image:
+        radial-gradient(circle at 15% 50%, var(--primary-glow), transparent 25%),
+        radial-gradient(circle at 85% 30%, var(--primary-glow), transparent 25%);
+    color: var(--text-main);
+    font-family: 'Cairo', 'Poppins', sans-serif;
+    line-height: 1.7;
+    overflow-x: hidden;
+    min-height: 100vh;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    line-height: 1.3;
+    margin-bottom: 1.25rem;
+    font-weight: 700;
+}
+
+/* التنسيق الخاص باللغة الإنجليزية (LTR) */
+html[lang="en"] body {
+    font-family: 'Poppins', 'Cairo', sans-serif;
+}
+
+/* الروابط والقوائم */
+a {
+    text-decoration: none;
+    color: inherit;
+    transition: var(--transition);
+}
+
+ul {
+    list-style: none;
+}
+
+/* النص المميز */
+.text-accent {
+    color: var(--text-accent);
+}

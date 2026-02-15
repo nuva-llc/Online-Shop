@@ -1,0 +1,165 @@
+/**
+ * Navbar CSS - القائمة العلوية
+ * يحتوي على تنسيقات شريط التنقل والقائمة المتجاوبة
+ */
+
+/* القائمة العلوية (Navbar) - منفصلة ومنحنية */
+.navbar {
+    background: rgba(255, 255, 255, 0.03);
+    backdrop-filter: blur(30px) saturate(180%);
+    -webkit-backdrop-filter: blur(30px) saturate(180%);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 24px;
+    padding: 1rem 2rem;
+    position: sticky;
+    top: 15px;
+    margin: 0 15px;
+    /* Reduced margin for mobile */
+    z-index: 1000;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+@media (min-width: 768px) {
+    .navbar {
+        top: 25px;
+        margin: 0 30px;
+    }
+}
+
+.navbar .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+}
+
+.nav-actions {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.lang-btn {
+    padding: 0 10px !important;
+    min-width: 45px;
+    height: 36px;
+    border-radius: 10px !important;
+    font-weight: 800;
+}
+
+.menu-toggle {
+    display: none;
+    background: transparent;
+    border: none;
+    color: var(--text-main);
+    font-size: 1.4rem;
+    cursor: pointer;
+    padding: 5px;
+    transition: var(--transition);
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--text-main);
+    letter-spacing: -0.5px;
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    /* Significant gap for clarity */
+}
+
+@media (min-width: 1024px) {
+    .nav-links {
+        gap: 24px;
+    }
+}
+
+.nav-links a {
+    color: var(--text-muted);
+    font-weight: 500;
+    font-size: 0.85rem;
+    /* Slightly smaller for mobile */
+    position: relative;
+    white-space: nowrap;
+}
+
+@media (min-width: 768px) {
+    .nav-links a {
+        font-size: 0.95rem;
+    }
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+    color: var(--text-main);
+}
+
+.nav-links a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: -4px;
+    left: 0;
+    background: var(--primary);
+    transition: var(--transition);
+}
+
+.nav-links a:hover::after {
+    width: 100%;
+}
+
+/* Mobile Menu Logic */
+@media (max-width: 1024px) {
+    .menu-toggle {
+        display: block;
+    }
+
+    .nav-links {
+        position: absolute;
+        top: calc(100% + 15px);
+        left: 0;
+        right: 0;
+        background: var(--bg-body);
+        backdrop-filter: blur(20px);
+        border: 1px solid var(--border-glass);
+        border-radius: var(--radius-md);
+        padding: 20px;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 20px;
+        opacity: 0;
+        visibility: hidden;
+        transform: translateY(-10px);
+        transition: var(--transition);
+        box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+    }
+
+    .nav-links.active {
+        opacity: 1;
+        visibility: visible;
+        transform: translateY(0);
+    }
+
+    .nav-links a {
+        font-size: 1.1rem;
+        width: 100%;
+        padding: 10px 0;
+        border-bottom: 1px solid var(--border-glass);
+    }
+
+    .nav-links a:last-child {
+        border-bottom: none;
+    }
+}
+
+.cart-icon {
+    position: relative;
+    font-size: 1.2rem;
+    color: var(--text-main) !important;
+}

@@ -1,0 +1,75 @@
+/**
+ * Buttons CSS - الأزرار
+ * يحتوي على جميع أنماط الأزرار
+ */
+
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 24px;
+    background: linear-gradient(135deg, var(--primary) 0%, var(--primary-hover) 100%);
+    color: white;
+    border-radius: var(--radius-sm);
+    border: none;
+    cursor: pointer;
+    font-size: 0.95rem;
+    font-weight: 600;
+    transition: var(--transition);
+    box-shadow: 0 4px 15px var(--primary-glow);
+    gap: 8px;
+}
+
+.btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px var(--primary-glow);
+    filter: brightness(1.1);
+}
+
+.btn-secondary {
+    background: transparent;
+    border: 1px solid var(--border-glass);
+    color: var(--text-main);
+    box-shadow: none;
+}
+
+.btn-secondary:hover {
+    border-color: var(--primary);
+    background: rgba(16, 185, 129, 0.1);
+    color: var(--primary);
+}
+
+@media (max-width: 576px) {
+    .btn {
+        width: 100%;
+        padding: 12px 20px;
+    }
+}
+
+/* زر الرجوع التكتيكي (Tactical Back Button) */
+.btn-back {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid var(--border-glass);
+    color: var(--text-main);
+    padding: 8px 18px;
+    font-size: 0.9rem;
+    border-radius: 12px;
+    box-shadow: none;
+    margin-bottom: 25px;
+}
+
+.btn-back:hover {
+    background: rgba(16, 185, 129, 0.1);
+    border-color: var(--primary);
+    color: var(--primary);
+    transform: translateX(-5px);
+}
+
+html[lang="en"] .btn-back:hover {
+    transform: translateX(5px);
+}
+
+html[lang="en"] .btn-back i {
+    transform: scaleX(-1);
+    /* Reverse arrow for English */
+}

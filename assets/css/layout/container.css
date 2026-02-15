@@ -1,0 +1,10 @@
+/**
+ * Container CSS - الحاوية الرئيسية
+ * يحتوي على تنسيقات الحاوية المركزية
+ */
+
+.container {
+    max-width: var(--container-width);
+    margin: 0 auto;
+    padding: 0 20px;
+}

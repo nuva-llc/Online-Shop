@@ -1,0 +1,69 @@
+/**
+ * Hero CSS - قسم الترحيب
+ * يحتوي على تنسيقات صفحة البداية وقسم الترحيب
+ */
+
+.hero {
+    min-height: 70vh;
+    display: flex;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+    padding: 120px 0;
+    margin-top: -120px;
+    /* Offset for floating header effect */
+    background: radial-gradient(circle at 50% -20%, rgba(16, 185, 129, 0.1), transparent 70%);
+}
+
+@media (max-width: 768px) {
+    .hero {
+        min-height: auto;
+        padding: 40px 15px;
+    }
+}
+
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: radial-gradient(circle at 50% 50%, rgba(16, 185, 129, 0.15), transparent 60%);
+    z-index: -1;
+}
+
+.hero-content {
+    max-width: 900px;
+    margin: 0 auto;
+    text-align: center;
+    position: relative;
+    z-index: 2;
+    padding: 80px;
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(20px);
+    border-radius: 40px;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+}
+
+.hero h1 {
+    font-size: clamp(2rem, 8vw, 3.5rem);
+    /* Fluid typography */
+    font-weight: 800;
+    margin-bottom: 24px;
+    line-height: 1.2;
+    background: linear-gradient(to right, #fff, #b4b4b4);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    filter: drop-shadow(0 5px 15px rgba(0, 0, 0, 0.2));
+    animation: fadeInDown 0.8s ease;
+}
+
+.hero p {
+    font-size: 1.25rem;
+    margin-bottom: 40px;
+    color: var(--text-muted);
+    animation: fadeInUp 0.8s ease 0.2s backwards;
+}
